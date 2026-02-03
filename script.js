@@ -307,6 +307,24 @@ gsap.utils.toArray(".project-item").forEach((project, i) => {
 });
 
 // ============================================
+// EXPERIENCE
+// ============================================
+gsap.utils.toArray(".experience-item").forEach((item, i) => {
+  gsap.from(item, {
+    scrollTrigger: {
+      trigger: item,
+      start: "top 85%",
+      toggleActions: "play none none reverse",
+    },
+    opacity: 0,
+    y: 80,
+    duration: 0.8,
+    delay: i * 0.15,
+    ease: "power3.out",
+  });
+});
+
+// ============================================
 // ACHIEVEMENTS - FIXED
 // ============================================
 gsap.utils.toArray(".achievement-item").forEach((item, i) => {
